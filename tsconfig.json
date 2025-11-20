@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"target": "esnext",
+		"types": ["node"],
+
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
+
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"exclude": ["./dist/**/*", "./node_modules/**/*", "./logs/**/*"]
+}
