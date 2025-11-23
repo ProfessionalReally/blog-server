@@ -6,6 +6,9 @@ export const addComment = async (req: Request, res: Response) => {
 	try {
 		const comment = new Comment(req.body);
 
+		// @ts-ignore
+		comment.author = req.user?.id;
+
 		await Post.findByIdAndUpdate(req.body.postId, {
 			$push: { comments: comment },
 		});

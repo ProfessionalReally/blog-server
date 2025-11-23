@@ -32,12 +32,14 @@ export const getPosts = async (req: Request, res: Response) => {
 		]);
 
 		res.status(200).json({
-			data: posts.map(mapPost),
-			pagination: {
-				page,
-				limit,
-				total,
-				lastPage: Math.ceil(total / limit),
+			data: {
+				data: posts.map(mapPost),
+				pagination: {
+					page,
+					limit,
+					total,
+					lastPage: Math.ceil(total / limit),
+				},
 			},
 		});
 	} catch (error) {
